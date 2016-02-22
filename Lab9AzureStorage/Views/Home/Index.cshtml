@@ -1,0 +1,19 @@
+﻿
+@model List<Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob>
+
+@{
+    ViewBag.Title = "Index";
+
+
+}
+
+<h2>Index</h2>
+<a href="/Home/Nueva">Nueva</a>
+<br/><br/>
+@foreach (var item in Model)
+{
+    <img src="@item.Uri" style="max-width: 300px;" />
+    <a href="/Home/Borrar?id=@item.Name">Borrar</a>
+    <br />
+}
+

@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Nueva";
+}
+
+<h2>Nueva</h2>
+
+@using (Html.BeginForm("Nueva", "Home", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <input type="file" name="fichero"/>
+    <br/>
+    <input type="submit" value ="subir"/>
+}
